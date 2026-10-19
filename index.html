@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MangaChill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍥</text></svg>">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">MangaChill</span></div>
+    <div class="cur">
+      <span data-help="gold" title="Pièces — clic droit : comment en obtenir">🪙 <b id="gold">0</b></span>
+      <span data-help="gems" title="Gemmes — clic droit : comment en obtenir">💎 <b id="gems">0</b></span>
+      <span data-help="chars" title="Personnages recrutés — clic droit : comment en obtenir">🎴 <b id="ownedTop">0</b></span>
+      <span data-help="tokens" title="Tokens de boss — clic droit : comment en obtenir">🎟️ <b id="tokTop">0</b></span>
+      <span data-help="cap" title="Niveau maximum — clic droit : comment l'augmenter">🔒 <b id="capTop">20</b></span>
+    </div>
+    <nav class="nav">
+      <button data-act="tab" data-arg="explore">🗺️<span>Exploration</span></button>
+      <button data-act="tab" data-arg="team">👥<span>Équipe</span></button>
+      <button data-act="tab" data-arg="collection">📖<span>Encyclopédie</span></button>
+      <button data-act="tab" data-arg="boss">👑<span>Boss</span></button>
+      <button data-act="tab" data-arg="tower">🗼<span>Tour</span></button>
+      <button data-act="tab" data-arg="dojo">🥋<span>Dojo</span></button>
+      <button data-act="tab" data-arg="summon">🎴<span>Invocation</span></button>
+      <button data-act="tab" data-arg="shop">🏪<span>Boutique</span></button>
+      <button data-act="tab" data-arg="ach">🏆<span>Succès</span></button>
+      <button data-act="tab" data-arg="options">⚙️<span>Options</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page" id="page-explore">
+      <div class="explore">
+        <aside class="zones" id="zoneList"></aside>
+        <div class="battle" id="battle"></div>
+      </div>
+    </section>
+    <section class="page" id="page-team"></section>
+    <section class="page" id="page-collection"></section>
+    <section class="page" id="page-boss"></section>
+    <section class="page" id="page-tower"></section>
+    <section class="page" id="page-dojo"></section>
+    <section class="page" id="page-summon"></section>
+    <section class="page" id="page-shop"></section>
+    <section class="page" id="page-ach"></section>
+    <section class="page" id="page-options"></section>
+  </main>
+
+  <div class="modal" id="modal"><div class="mbox"><button class="mclose" data-act="closeModal" aria-label="Fermer">✕</button><div id="modalBody"></div></div></div>
+  <div id="toasts"></div>
+
+  <script src="js/chars.js"></script>
+  <script src="js/tiers.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/evolutions.js"></script>
+  <script src="js/tower.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
